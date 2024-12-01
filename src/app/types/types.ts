@@ -8,7 +8,7 @@ export type userData = {
     blockedContactIds?: string[];
     chatIds?: string[];
     messageIds?: string[];
-    isOnline: boolean;
+    isLoggedIn: boolean;
     settings: settingsData;
     suspiciousActivity: suspiciousActivityData[];
     isSuspended?: boolean;
@@ -24,7 +24,7 @@ export type settingsData = {
 export type suspiciousActivityData = {
     searchAttempt: number;
     inputData: string;
-    attemptDate: Date;
+    attemptDate: number;
 }
 
 export type chatData = {

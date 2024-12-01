@@ -1,4 +1,5 @@
 import { userData, settingsData, suspiciousActivityData } from "../types/types";
+import { SuspiciousActivity } from "./suspicious-activity.class";
 
 export class User {
     id: string;
@@ -10,9 +11,9 @@ export class User {
     blockedContactIds: string[];
     chatIds: string[];
     messageIds: string[];
-    isOnline: boolean;
+    isLoggedIn: boolean;
     settings: settingsData;
-    suspiciousActivity?: suspiciousActivityData[];
+    suspiciousActivity?: SuspiciousActivity[];
     isSuspended?: boolean;
 
     constructor(data: userData) {
@@ -25,7 +26,7 @@ export class User {
         this.blockedContactIds = data.blockedContactIds ?? [];
         this.chatIds = data.chatIds ?? [];
         this.messageIds = data.messageIds ?? [];
-        this.isOnline = data.isOnline ?? false;
+        this.isLoggedIn = data.isLoggedIn ?? false;
         this.settings = data.settings;
         this.suspiciousActivity = data.suspiciousActivity ?? [];
         this.isSuspended = data.isSuspended ?? false;
