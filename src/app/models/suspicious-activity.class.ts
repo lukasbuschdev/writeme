@@ -1,13 +1,13 @@
 import { suspiciousActivityData } from "../types/types";
 
 export class SuspiciousActivity {
+    id: number;
     searchAttempt: number;
     inputData: string;
-    attemptDate: number;
 
-    constructor(data: Omit<suspiciousActivityData, "attemptDate">) {
+    constructor(data: Omit<suspiciousActivityData, "id">) {
+        this.id = Date.now();
         this.searchAttempt = data.searchAttempt;
         this.inputData = data.inputData;
-        this.attemptDate = Date.now();
     }
 }

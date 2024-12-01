@@ -1,8 +1,8 @@
 export type userData = {
-    id?: string;
+    id: number;
     name: string;
     password: string;
-    mail?: string;
+    mail: string;
     created: Date;
     contactIds?: string[];
     blockedContactIds?: string[];
@@ -22,23 +22,23 @@ export type settingsData = {
 }
 
 export type suspiciousActivityData = {
+    id: number;
     searchAttempt: number;
     inputData: string;
-    attemptDate: number;
 }
 
 export type chatData = {
-    id?: string;
+    id: number;
     key: string;
     userIds: string[];
     messageIds: string[];
 }
 
 export type messageData = {
-    id?: string;
+    id: number;
     key: string;
     content: string;
-    date?: Date;
+    date: Date;
 }
 
 export type suspendedUsersData = {
